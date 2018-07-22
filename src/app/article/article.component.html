@@ -1,0 +1,11 @@
+<p>
+  article works!
+</p>
+<p>{{editThisArticle | json}}</p>
+<hr>
+<h1></h1>
+<input name="title" [(ngModel)]="editThisArticle.title">
+<br>
+<input name="details" [(ngModel)]="editThisArticle.details">
+<br>
+<button class="btn btn-sm btn-primary" (click)="goBack()">Save</button>

@@ -1,0 +1,35 @@
+.main{
+    align-items: center;
+    text-align: center;
+    width: 500px;
+    border: 2 px solid #fcf3f3;
+    margin-top: 20px; 
+    margin-left: 250px;
+}
+
+
+.white{
+    color: white;
+}
+
+.itemslist{
+    text-align: center;
+}
+
+ul{
+    margin-top: 20px;   
+    margin-left: 20px;
+    color:white;
+}
+
+li{
+    margin-top: 5px;
+    background-color: gray;
+    border: 1px solid black;
+    height: 34px;
+
+}
+
+.delete{
+    margin-right: 5px;
+}

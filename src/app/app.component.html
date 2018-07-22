@@ -1,0 +1,26 @@
+<div class="main">
+  <h4 class="itemslist">Item's List</h4>
+  <hr>
+  <form #form="ngForm" (ngSubmit)="addItem()">
+    <div style="display: inline-flex">
+      <input placeholder="Add Topic" class="addText" name="newItem"
+       #newItem="ngModel" [(ngModel)]="article.title">
+      <button type="submit" class="btn btn-sm btn-success">Add</button>
+    </div>
+  </form>
+
+  <ul>
+    <li  *ngFor="let article of articleArr; let index = index">{{article.title | uppercase}}
+      <span class="inline-flex float-right">
+        <a class="btn btn-sm btn-danger" href="#" routerLink="/edit" (click)="editArticle(article)">Edit</a>
+        |
+        <a class="btn btn-sm btn-danger" href="#" (click)="deleteArticle(index)">Delete</a>
+      </span>
+    </li>
+  </ul>
+  <edit-article *ngIf="newArticle != undefined"
+                [editThisArticle]="newArticle"
+                (save)="recieveSavedValues($event)"></edit-article>
+
+
+</div>
